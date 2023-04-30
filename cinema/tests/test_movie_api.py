@@ -203,7 +203,7 @@ class AdminMovieApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
 
         movie = Movie.objects.get(id=res.data["id"])
-        genres = movie.genres.all()
+        genres = movie.genres
         self.assertEqual(genres.count(), 2)
         self.assertIn(genre1, genres)
         self.assertIn(genre2, genres)
@@ -221,7 +221,7 @@ class AdminMovieApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
 
         movie = Movie.objects.get(id=res.data["id"])
-        actors = movie.actors.all()
+        actors = movie.actors
         self.assertEqual(actors.count(), 2)
         self.assertIn(actor1, actors)
         self.assertIn(actor2, actors)
