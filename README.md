@@ -5,9 +5,18 @@ API on DRF (service for processing ticket orders)
 ### Installing with GitHub
 Install PostgresSQL and create db
 
-git clone https://github.com/Yulia-Mala/dockerize-cinema.git\
-cd cinema API python -m venv venv\
+git clone https://github.com/Yulia-Mala/dockerize-cinema.git
+
+...MacOS:\
+-m venv venv\
 source venv/bin/activate\
+pip install -r requirements.txt
+
+
+...Windows:\
+pip install virtualenv\
+virtualenv your-venv-name\
+your-venv-name\Scripts\activate\
 pip install -r requirements.txt
 
 #### set your credentials into venv variables: 
@@ -39,3 +48,6 @@ get access token: /api/user/token/
 • Filtering movies and movie sessions
 
 #### Documentation is located at /api/doc/swagger/
+
+<img width="1272" alt="image" src="https://user-images.githubusercontent.com/121285272/235371335-d3ce4b73-2436-4f9d-ab46-2feb899b7ec1.png">
+
